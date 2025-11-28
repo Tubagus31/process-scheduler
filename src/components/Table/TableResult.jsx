@@ -7,8 +7,8 @@ function TableResult({ results, averageTime, averageTurnAround }) {
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-center text-slate-600">
-              <th className="pr-4">Name</th>
+            <tr className="text-center text-slate-600 bg-slate-50">
+              <th className="pr-4 py-2">Name</th>
               <th className="pr-4">Arrival</th>
               <th className="pr-4">Burst</th>
               <th className="pr-4">Start</th>
@@ -20,12 +20,12 @@ function TableResult({ results, averageTime, averageTurnAround }) {
           <tbody>
             {results.map((r) => (
               <tr key={r.id} className="border-t text-center">
-                <td className="py-2">{r.name}</td>
-                <td>{r.arrival}</td>
-                <td>{r.burst}</td>
-                <td>{r.start ?? "-"}</td>
-                <td>{r.completion ?? "-"}</td>
-                <td>{r.waiting ?? "-"}</td>
+                <td className="py-2 border-r">{r.name}</td>
+                <td className="border-r">{r.arrival}</td>
+                <td className="border-r">{r.burst}</td>
+                <td className="border-r">{r.start ?? "-"}</td>
+                <td className="border-r">{r.completion ?? "-"}</td>
+                <td className="border-r">{r.waiting ?? "-"}</td>
                 <td>{r.turnaround ?? "-"}</td>
               </tr>
             ))}
